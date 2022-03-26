@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CẬP NHẬT THÔNG TIN CÁ NHÂN"
+        android:background="#3F51B5"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="30sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:stretchColumns="1">
+
+
+            <TableRow>
+                <TextView
+                    android:layout_height="match_parent"
+                    android:text="CMND:"
+                    android:gravity="bottom"/>
+
+                <EditText
+                    android:id="@+id/edtCMND"
+                    android:hint="CMND ở đây"
+                    android:gravity="bottom"
+                    android:inputType="number"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_height="match_parent"
+                    android:text="Số điện thoại: "
+                    android:gravity="bottom"/>
+
+                <EditText
+                    android:id="@+id/edtDienThoai"
+                    android:gravity="bottom"
+                    android:hint="Số phone ở đây"
+                    android:inputType="number"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_height="match_parent"
+                    android:text="Địa chỉ: "
+                    android:gravity="bottom"/>
+
+                <EditText
+                    android:id="@+id/edtDiaChi"
+                    android:hint="Địa chỉ ở đây"
+                    android:gravity="bottom"/>
+            </TableRow>
+            <TableRow>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_column="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCapNhat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cập nhật" />
+
+                    <Button
+                        android:id="@+id/btnLamLai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30sp"
+                        android:text="Làm lại" />
+
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/hinhmau" />
+    </LinearLayout>
+
+
+</LinearLayout>
